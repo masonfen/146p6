@@ -1,0 +1,101 @@
+PS C:\Users\Owner\P6-GameAI\146p6\src> python run.py
+2026-02-17 20:59:22.531920: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-02-17 20:59:25.085388: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Loading model for controller: results\basic_model_20_epochs_timestamp_1771390212.keras
+2026-02-17 20:59:27.050753: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+| | | |
+| | | |
+| | | |
+Turn: X
+Player X took position (1, 1).
+| | | |
+| |X| |
+| | | |
+Turn: O
+reference:
+row 0 is neutral.
+row 1 is happy.
+row 2 is surprise.
+Emotion detected as happy (row 1).
+Press Enter to continue, or type the correct number (0, 1, or 2):
+0
+reference:
+col 0 is neutral.
+col 1 is happy.
+col 2 is surprise.
+Emotion detected as happy (col 1).
+Press Enter to continue, or type the correct number (0, 1, or 2):
+0
+Player O took position (0, 0).
+|O| | |
+| |X| |
+| | | |
+Turn: X
+Player X took position (0, 2).
+|O| |X|
+| |X| |
+| | | |
+Turn: O
+reference:
+row 0 is neutral.
+row 1 is happy.
+row 2 is surprise.
+Emotion detected as happy (row 1).
+Press Enter to continue, or type the correct number (0, 1, or 2):
+0
+reference:
+col 0 is neutral.
+col 1 is happy.
+col 2 is surprise.
+Emotion detected as happy (col 1).
+Press Enter to continue, or type the correct number (0, 1, or 2):
+0
+Position (0, 0) is already taken.
+|O| |X|
+| |X| |
+| | | |
+Turn: O
+reference:
+row 0 is neutral.
+row 1 is happy.
+row 2 is surprise.
+Emotion detected as happy (row 1).
+Press Enter to continue, or type the correct number (0, 1, or 2):
+1
+reference:
+col 0 is neutral.
+col 1 is happy.
+col 2 is surprise.
+Emotion detected as happy (col 1).
+Press Enter to continue, or type the correct number (0, 1, or 2):
+0
+Player O took position (1, 0).
+|O| |X|
+|O|X| |
+| | | |
+Turn: X
+Player X took position (1, 2).
+|O| |X|
+|O|X|X|
+| | | |
+Turn: O
+reference:
+row 0 is neutral.
+row 1 is happy.
+row 2 is surprise.
+Emotion detected as happy (row 1).
+Press Enter to continue, or type the correct number (0, 1, or 2):
+2
+reference:
+col 0 is neutral.
+col 1 is happy.
+col 2 is surprise.
+Emotion detected as happy (col 1).
+Press Enter to continue, or type the correct number (0, 1, or 2):
+0
+Player O took position (2, 0).
+|O| |X|
+|O|X|X|
+|O| | |
+Player O has won!

@@ -1,0 +1,97 @@
+* Data preprocessing
+transfer train dataset:
+Found 245 files belonging to 2 classes.
+Using 196 files for training.
+Using 49 files for validation.
+2026-02-17 21:07:15.220221: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+transfer test dataset:
+Found 153 files belonging to 2 classes.
+* Training transfered_model for 10 epochs
+Loading base model for transfer: results\basic_model_20_epochs_timestamp_1771390212.keras
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ sequential (Sequential)              │ (None, 48)                  │         146,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 32)                  │           1,568 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 32)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 2)                   │              66 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 148,274 (579.20 KB)
+ Trainable params: 1,634 (6.38 KB)
+ Non-trainable params: 146,640 (572.81 KB)
+Epoch 1/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 2s 386ms/step - accuracy: 0.4898 - loss: 0.7795 - val_accuracy: 0.5102 - val_loss: 0.6920
+Epoch 2/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 154ms/step - accuracy: 0.5306 - loss: 0.7086 - val_accuracy: 0.5102 - val_loss: 0.6919
+Epoch 3/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 149ms/step - accuracy: 0.5153 - loss: 0.7468 - val_accuracy: 0.5102 - val_loss: 0.6918
+Epoch 4/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 159ms/step - accuracy: 0.4949 - loss: 0.7704 - val_accuracy: 0.5102 - val_loss: 0.6915
+Epoch 5/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 148ms/step - accuracy: 0.5459 - loss: 0.7087 - val_accuracy: 0.5306 - val_loss: 0.6913
+Epoch 6/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 151ms/step - accuracy: 0.4796 - loss: 0.7688 - val_accuracy: 0.5306 - val_loss: 0.6910
+Epoch 7/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 154ms/step - accuracy: 0.5153 - loss: 0.7352 - val_accuracy: 0.5306 - val_loss: 0.6906
+Epoch 8/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 152ms/step - accuracy: 0.4643 - loss: 0.7575 - val_accuracy: 0.5306 - val_loss: 0.6903
+Epoch 9/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 154ms/step - accuracy: 0.5357 - loss: 0.7229 - val_accuracy: 0.5306 - val_loss: 0.6900
+Epoch 10/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 160ms/step - accuracy: 0.5204 - loss: 0.7360 - val_accuracy: 0.5306 - val_loss: 0.6897
+* Evaluating transfered_model
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 32ms/step - accuracy: 0.5556 - loss: 0.6848 
+* Confusion Matrix for transfered_model
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 127ms/step
+2026-02-17 21:07:20.956602: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+[[34 36]
+ [32 51]]
+* Training random_model for 10 epochs
+Model: "sequential_1"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ sequential (Sequential)              │ (None, 48)                  │         146,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_2 (Dense)                      │ (None, 32)                  │           1,568 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 (Dropout)                  │ (None, 32)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_3 (Dense)                      │ (None, 2)                   │              66 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 148,274 (579.20 KB)
+ Trainable params: 148,274 (579.20 KB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 3s 447ms/step - accuracy: 0.5408 - loss: 0.6857 - val_accuracy: 0.5918 - val_loss: 0.6873
+Epoch 2/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 219ms/step - accuracy: 0.5306 - loss: 0.6930 - val_accuracy: 0.5102 - val_loss: 0.6869
+Epoch 3/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 234ms/step - accuracy: 0.4949 - loss: 0.7122 - val_accuracy: 0.5918 - val_loss: 0.6868
+Epoch 4/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 226ms/step - accuracy: 0.4643 - loss: 0.6980 - val_accuracy: 0.6122 - val_loss: 0.6881
+Epoch 5/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 224ms/step - accuracy: 0.5255 - loss: 0.6942 - val_accuracy: 0.5714 - val_loss: 0.6901
+Epoch 6/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 235ms/step - accuracy: 0.5561 - loss: 0.6926 - val_accuracy: 0.5306 - val_loss: 0.6906
+Epoch 7/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 254ms/step - accuracy: 0.5816 - loss: 0.6894 - val_accuracy: 0.5510 - val_loss: 0.6895
+Epoch 8/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 222ms/step - accuracy: 0.4847 - loss: 0.6902 - val_accuracy: 0.5306 - val_loss: 0.6880
+Epoch 9/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 235ms/step - accuracy: 0.5051 - loss: 0.6911 - val_accuracy: 0.5918 - val_loss: 0.6861
+Epoch 10/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 233ms/step - accuracy: 0.5408 - loss: 0.6878 - val_accuracy: 0.5510 - val_loss: 0.6840
+* Evaluating random_model
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 27ms/step - accuracy: 0.6405 - loss: 0.6839 
+* Confusion Matrix for random_model
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 126ms/step
+2026-02-17 21:07:29.606042: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+[[33 37]
+ [18 65]]
+* Comparison plot saved as results/transfer_comparison.png

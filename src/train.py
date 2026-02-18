@@ -35,7 +35,8 @@ def plot_history(history):
     plt.grid(True)
     plt.legend()
     plt.xlabel('Epoch')
-    plt.show()
+    plt.savefig('results/basic_model_history.png')
+    print('* History plot saved as results/basic_model_history.png')
 
 if __name__ == "__main__":
     # if you want to load your model later, you can use:
@@ -45,7 +46,7 @@ if __name__ == "__main__":
     # plot_history(history)
     # 
     # Your code should change the number of epochs
-    epochs = 1
+    epochs = 20
     print('* Data preprocessing')
     train_dataset, validation_dataset, test_dataset = get_datasets()
     name = 'basic_model'
